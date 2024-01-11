@@ -1,11 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/Navbar.css'
 import { ethers } from 'ethers';
 
 const Navbar = () => {
   const [isConnected, setIsConnected] = useState(false);
+  const [currentProvider, setCurrentProvider] = useState(null);
 
-  const detectProvider = ()=>{
+  useEffect(()=>{
     let provider = null;
     if (window.ethereum) {
       provider = window.ethereum;
@@ -15,11 +16,10 @@ const Navbar = () => {
       console.log("Non-ethereum browser detected. You should install metamask.")
     }
     console.log("provider",provider)
-    return provider;
-  }
+    setCurrentProvider(provider)
+  }, [currentProvider])
 
   const connectWallet = async () => {
-    const currentProvider = detectProvider();
     if (currentProvider) {
       const account = await currentProvider.request({method : "eth_requestAccounts"});
       console.log("🚀 ~ connectWal ~ account:", account);
