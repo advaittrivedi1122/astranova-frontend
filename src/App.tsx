@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className='bg-slate-700 h-screen'>
+    <div className="h-screen backdrop-blur-">
       <Navbar />
     </div>
   )
