@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'landing-page-image': "url('./assets/landing_page_background.jpg')"
+        'landing-page-image': "url('./assets/astronaut.jpg')",
       }
     },
   },

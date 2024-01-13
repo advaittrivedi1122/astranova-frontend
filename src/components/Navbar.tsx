@@ -28,10 +28,11 @@ const Navbar = () => {
   }
 
   return (
-    <div className='backdrop-blur h-15 flex flex-row justify-between items-center'>
-      <h1 className="text-3xl m-3 font-bold font-['Courier new'] text-cyan-200">
+    <div className='backdrop-blur-3xl h-14 flex flex-row justify-between items-center'>
+      <h1 className="text-3xl m-3 font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           AstraNova
       </h1>
+      <h1 className='text-3xl text-with-gradient drop-shadow-2xl inline-block font-bold'>Buy, Sell & Collect NFTs</h1>
       {!isConnected && (
         <button className="h-10 mr-8 p-2 text-gray-900 font-medium active:bg-slate-200/80 font-['Courier new'] bg-slate-200/70 rounded-md" onClick={()=>{connectWallet()}}>Connect Wallet</button>
       )}
