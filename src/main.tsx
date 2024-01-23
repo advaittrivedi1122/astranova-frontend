@@ -5,8 +5,8 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <div className='bg-landing-page-image bg-cover bg-center'>
+    {/* <div className=''> */}
     	<App />
-    </div>
+    {/* </div> */}
   </React.StrictMode>,
 )
